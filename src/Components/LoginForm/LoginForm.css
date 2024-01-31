@@ -1,64 +1,44 @@
-.background {
-  background-color: #57737a;
-  height: 100vh;
-  margin: 0;
+.login-form {
+  /* border: 2px solid black; */
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  /* border: 2px solid red; */
 }
 
-.mainContainer {
-  background-color: #9db5b2;
-  padding: 10%;
-  border-radius: 10px;
-  box-shadow: 10px 100px 200px rgba(0, 0, 0, 0.2);
-}
-
-.loginContainer {
+.login-details {
+  border: 2px solid black;
   display: flex;
   flex-direction: column;
+  padding: 5% 17%;
+  gap: 1rem;
 }
 
-.loginContainer h2 {
-  color: #1c3738;
-  font-weight: bolder;
+.login-details h2 {
+  /* border: 2px solid green; */
+  margin-top: -25px;
+  margin-left: -120px;
 }
 
-.loginContainer form {
-  display: flex;
-  flex-direction: column;
+.login-details span {
+  margin-left: -50px;
 }
 
-.loginContainer input {
-  background-color: #9db5b2;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.login-details input {
+  border: 0.8px solid black;
+  width: 150%;
+  padding: 3px;
+  margin-left: -50px;
+}
+
+.sign-in-button {
+  border: 0.7px solid black;
+  width: 156%;
+  /* margin-right: 3px; */
+  margin-left: -50px;
+  margin-top: 15px;
+  padding: 7% 3%;
+  background-color: black;
   color: white;
-  border: none;
-  width: 100%;
-  outline: none;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #ffff;
-  font-size: 1em;
-}
-
-.loginContainer input::placeholder {
-  color: #666;
-  transition: 0.3s;
-  pointer-events: none;
-}
-
-.loginContainer input:focus + .loginContainer input::placeholder {
-  text-transform: uppercase;
-}
-
-.loginContainer button {
-  width: 100%;
-  padding: 6% 2%;
-  background-color: #305252;
-  color: white;
-  border-radius: 12px;
-  border: none;
-  font-weight: bold;
 }

@@ -1,47 +1,35 @@
-import { Fragment, useState } from "react";
+import React, { useState } from "react";
 import "./LoginForm.css";
+
 const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [isPlaceholder, setIsPlaceholder] = useState(false);
 
-  const handleInputFocus = () => {
-    setIsPlaceholder(true);
+  const handleUsername = (e) => {
+    setUsername(e.target.value);
   };
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
 
-    setUsername("");
-    setPassword("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
   };
 
   return (
-    <Fragment>
-      <div className="background">
-        <div className="mainContainer">
-          <div className="loginContainer">
-            <h2>Sign In</h2>
-            <form onSubmit={handleSubmit}>
-              <input
-                type="text"
-                value={username}
-                placeholder="Username"
-                onChange={(e) => setUsername(e.target.value)}
-                onFocus={handleInputFocus}
-              />
-              <input
-                type="password"
-                value={password}
-                placeholder="Password"
-                onChange={(e) => setPassword(e.target.value)}
-                onFocus={handleInputFocus}
-              />
-              <button type="submit">Sign In</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </Fragment>
+    <div className="login-form">
+      <form className="login-details" onSubmit={handleSubmit}>
+        <h2>Sign In</h2>
+        <span>Username: </span>
+        <input type="username" value={username} onChange={handleUsername} />
+
+        <span>Password: </span>
+        <input type="password" value={password} onChange={handlePassword} />
+
+        <button className="sign-in-button">Sign In</button>
+      </form>
+      {/* <div className="company-img">Company Image</div> */}
+    </div>
   );
 };
 
